@@ -46,7 +46,7 @@ Then : validate "<username>" entered
 Examples:
 |title|username|password|maintitle|
 |Login \| Salesforce|priyadharshini.dp.1011@gmail.com|priya@123|Home Page ~ Salesforce - Developer Edition|
-
+@smoke
 Scenario Outline: Forgot Password- 4 A
 Given : Opened the sales force application
 When : click on the login in sales force
@@ -75,13 +75,13 @@ Then : Validate the errorMsg in homePage "<errorMsg>"
 Examples:
 |title|username|password|errorMsg|
 |Login \| Salesforce|123|22131|Please check your username and password. If you still can't log in, contact your Salesforce administrator.|
-@Smoke 
+
 Scenario Outline: Select user menu for <username> drop down
 Given : Opened the sales force application
 When : click on the login in sales force
 Then : Valiadte the title of page "<title>"
-When : entered the "<username>"
-Then : validate "<username>" entered
+When : entered the "<username1>"
+Then : validate "<username1>" entered
 When : entered the password "<password>"
 Then : validate the password "<password>" entered
 When : When clicking on login
@@ -89,5 +89,5 @@ Then : Validate the title of mainpage "<maintitle>"
 When : When clicking on userName
 Then : Validate the dropDown
 Examples:
-|title|username|password|maintitle|dropDownList|
-|Login \| Salesforce|priyadharshini.dp.1011@gmail.com|priya@123|Home Page ~ Salesforce - Developer Edition|My Profile,My Settings,Developer Console,Switch to Lightning Experience,Logout|
+|title|username1|password|maintitle||
+|Login \| Salesforce|priyadharshini.d.1011@gmail.com|priya@123|
